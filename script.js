@@ -1,6 +1,8 @@
 const button = document.getElementById('convert-btn');
 const input = document.getElementById('number');
 const output = document.getElementById('output');
+const tooltip = document.getElementById('tooltip');
+const container = document.querySelector('.output-container');
 
 console.log('-- start --');
 
@@ -29,7 +31,6 @@ const formValidation = () => {
 }
 
 const convertToRoman = (input) => {
-    
     let roman = '';
     const romanNum = {
         M: 1000,
@@ -60,12 +61,19 @@ const convertToRoman = (input) => {
             roman += key;
             input -= value;
         } 
+
         else if (hits > 1 && hits < 4) {
             roman += key.repeat(hits);
             input -= value * hits;
         }
     }
-
-    console.log('Output:', roman);
-    output.innerText = roman;
-}
+        console.log('Output:', roman);
+        output.classList.remove('hidden');
+        output.textContent = roman;
+    }
+    
+    input.addEventListener('input', (e) => {
+        container.classList.remove('hidden');
+        tooltip.classList.remove('hidden');
+        tooltip.textContent = `${e.target.value} is equivalent to: `;
+    })

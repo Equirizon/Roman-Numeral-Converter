@@ -8,9 +8,14 @@
 </head>
 <body>
     <h1>Roman Numeral Converter</h1>
+    <div class="main-container">
         <input type="number" id="number" placeholder="Enter a number"/>
-        <button id="convert-btn">Convert</button>
-        <div id="output"></div>
+        <button id="convert-btn" class="button">Convert</button>
+        <div class="output-container hidden">
+            <div id="tooltip" class="output hidden"></div>
+            <div id="output" class="output hidden"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -18,12 +18,89 @@ body {
     height: 100vh;
 }
 
-#output {
-    margin: auto;
-    height: max-content;
-    padding: 1rem;
-    width: 80%;
-    max-width: 5rem;
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
     color: var(--text-color);
-    background: rgb(255, 255, 255);
+    margin: 3rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    min-height: 12rem;
+    border-radius: 25px;
+    padding: 2rem;
+    margin: auto;
+    width: 30%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+input[id="number"] { /* readability */
+    width: 50%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #412b28;
+    border-radius: 25px;
+    font-size: 1.5rem;
+}
+
+.button {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: #7d3409;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #a52a1a;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    width: 85%;
+    padding: 1rem;
+    border: #a52a1a 3px solid;
+    margin: 1rem auto;
+    box-shadow: inset 0 0 8px rgba(69, 69, 69, 0.4);
+    font-weight: 500;
+    animation: fade-in 1s ease;
+}
+
+.output {
+    padding: 1.2rem 1.5rem;
+    color: var(--text-color);
+    background: #fad0c4;
+    border-radius: 30px;
+    animation: fade-in 1s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
