@@ -1,3 +1,5 @@
+import { logoAnimation } from './modules/logo_module.js'
+
 const button = document.getElementById('convert-btn');
 const input = document.getElementById('number');
 const container = document.querySelector('.output-container');
@@ -138,5 +140,4 @@ const convertToRoman = (input) => {
         }, 1000);
     })
 
-// console.log('is output?', new Boolean(isOutput));
-
+logoAnimation();
